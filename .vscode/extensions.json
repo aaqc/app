@@ -1,0 +1,4 @@
+{
+    "recommendations": ["msjsdiag.vscode-react-native"],
+    "unwantedRecommendations": ["kiteco.kite"]
+}
