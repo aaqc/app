@@ -6,7 +6,8 @@
 
 1.  `yarn install`
 2.  `yarn start`
-3.  (in another terminal) `yarn android`
+3.  Add `MAPS_API_KEY=the-api-key` to `./android/local.properties`
+4.  (in another terminal) `yarn android`
     > if this fails, make sure you're using JDK 8 or 11
 
 > Tip in vscode: Press the button "React Native Packager" in the bottom bar after installing the recommended workspace extensions

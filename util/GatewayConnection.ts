@@ -7,11 +7,14 @@ export class GatewayConnection {
     private emitter: EventEmitter;
 
     constructor() {
-        this.connection = new WebSocket("wss://api.aaqc.svaren.dev/gateway");
+        this.connection = this.connectTo("wss://api.aaqc.svaren.dev");
         this.emitter = new EventEmitter();
         this.handleMessage = this.handleMessage.bind(this);
-        
         this.connection.addEventListener("message", this.handleMessage);
+    }
+
+    connectTo(host: string) {
+        return this.connection = new WebSocket(`${host}/gateway`);
     }
 
     private handleMessage(event: WebSocketMessageEvent) {
@@ -19,6 +22,8 @@ export class GatewayConnection {
             try {
                 const message = JSON.parse(event.data);
                 const { type, data } = message;
+
+                console.log(type);
 
                 this.emitter.emit("message", type, data || null);
             } catch (error) {
