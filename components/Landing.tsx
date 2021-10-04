@@ -50,6 +50,10 @@ const Landing: React.FunctionComponent<LandingProps> = (props) => {
                     {/* <View style={styles.default}></View> */}
 
                     <DroneCard />
+                    {/* <DroneCard />
+                    <DroneCard />
+                    <DroneCard />
+                    <DroneCard /> */}
                 </ScrollView>
             </SafeAreaView>
         </View>

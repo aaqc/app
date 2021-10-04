@@ -7,7 +7,8 @@
         "ios": "react-native run-ios",
         "start": "react-native start",
         "test": "jest",
-        "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "postinstall": "patch-package"
     },
     "dependencies": {
         "@react-navigation/native": "^6.0.4",
@@ -16,6 +17,7 @@
         "@types/react-native-maps": "^0.24.2",
         "@types/styled-components": "^5.1.14",
         "events": "^3.3.0",
+        "patch-package": "^6.4.7",
         "react": "17.0.2",
         "react-native": "0.65.1",
         "react-native-elements": "^3.4.2",
